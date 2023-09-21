@@ -179,7 +179,7 @@
     }
 }
 .block:nth-of-type(25) {
-	
+	background-color:var(--blue);
     >.img{
         opacity: 100%;
         object-position:0px -3cm;
