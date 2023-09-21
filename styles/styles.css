@@ -14,6 +14,9 @@
     --red: red;
     --grey: rgb(255, 255, 255);
     --beige: rgba(245, 245, 220, 0.926);
+    --darkgrey: #373232da;
+    --brown: #7950329e;
+    --darkpink: rgba(48, 4, 24, 0.884);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Poppins:wght@700&display=swap');
@@ -92,7 +95,7 @@ header{
     padding-top: 8.2rem;
     background: var(--blue);
     font-family: "poppins", sans-serif;
-    background: radial-gradient(circle farthest-corner at center center, var(--blue) 21%, var(--orange) 50%, var(--pink) 100%);
+    background: radial-gradient(circle farthest-corner at center center, var(--blue) 18%, var(--orange) 35%, var(--pink) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; 
     scale:.9;
@@ -242,9 +245,9 @@ a:link{
     width: 90px;
     padding: 10px;
     margin: 20px; */
-    color:rgba(48, 4, 24, 0.884);
-    background-color: #7950329e;
-    outline:solid #373232da;
+    color: var(--darkpink);
+    background-color: var(--brown);
+    outline: solid var(--darkgrey);
     /* border-radius: 50px;
     translate:0px 350vh; */
 
