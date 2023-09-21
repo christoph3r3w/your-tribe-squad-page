@@ -9,10 +9,11 @@ var TxtType = function(el, toRotate, period) {
 };
 
 TxtType.prototype.tick = function() {
+    /* Bepaalt welk stukje tekst wordt weergegeven op basis van this.loopnum. De waarde van isDeleting vertelt of het wordt toegevoegd of verwijderd. Delta geeft willekeurige tijdsvertraging voor het volgende stukje */ 
     var i = this.loopNum % this.toRotate.length;
     var fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
+    if (this.isDeleting) { 
     this.txt = fullTxt.substring(0, this.txt.length - 1);
     } else {
     this.txt = fullTxt.substring(0, this.txt.length + 1);
@@ -40,6 +41,7 @@ TxtType.prototype.tick = function() {
 };
 
 window.onload = function() {
+    /* Werkt wanneer de pagina volledig is geladen. Zoekt naar elementen met class "typewrite" en geeft het "txtype" object. Gebruikt de data en tekst uit de attributen van de html */
     var elements = document.getElementsByClassName('typewrite');
     for (var i=0; i<elements.length; i++) {
         var toRotate = elements[i].getAttribute('data-type');
@@ -50,7 +52,8 @@ window.onload = function() {
     }
 
     var css = document.createElement("style");
+    /* Dynamische css. Zorgt voor de cursor. */
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+    css.innerHTML = ".typewrite > .wrap { border-right: 0.06em solid var(--pink)}";
     document.body.appendChild(css);
 };
